@@ -1,6 +1,6 @@
 {
   "name": "get-github-download-count",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "bin": {
     "get-github-download-count": "./cli.js"
   },
