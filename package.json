@@ -1,6 +1,6 @@
 {
   "name": "get-github-download-count",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "bin": {
     "get-github-download-count": "./cli.js"
   },
@@ -9,20 +9,23 @@
   "scripts": {
     "test": "jest"
   },
+  "publishConfig": {
+    "registry": "https://github.com/jopemachine"
+  },
   "files": [
     "index.d.ts",
     "*.js"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jopemachine/get-npm-downloads.git"
+    "url": "git+https://github.com/jopemachine/get-github-download-count.git"
   },
   "author": "jopemachine",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jopemachine/get-npm-downloads/issues"
+    "url": "https://github.com/jopemachine/get-github-download-count/issues"
   },
-  "homepage": "https://github.com/jopemachine/get-npm-downloads#readme",
+  "homepage": "https://github.com/jopemachine/get-github-download-count#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "boxen": "^5.0.1",
