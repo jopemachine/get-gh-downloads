@@ -25,11 +25,20 @@ const data = getDownloadCount({
 ```
   Usage
 
-    $ get-gh-downloads [user_id] [repository_name] name_option tag_option
+    $ get-gh-downloads [user_id] [repository_name] options
+
+  Options
+
+    $ name
+    $ tag
+    $ latest
 
   Example:
 
+    $ get-gh-downloads jopemachine some-lib
+    $ get-gh-downloads jopemachine some-lib --name=0.0.1
     $ get-gh-downloads jopemachine some-lib --tag=v0.0.1
+    $ get-gh-downloads jopemachine some-lib --latest
 
   ✔ Works done!
 

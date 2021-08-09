@@ -9,11 +9,20 @@ const getDownloadCounts = require('./getDownloadCounts');
 const cli = meow(chalk.white(
 `  Usage
 
-    $ get-gh-downloads [user_id] [repository_name] name_option tag_option
+    $ get-gh-downloads [user_id] [repository_name] options
+
+  Options
+
+    $ name
+    $ tag
+    $ latest
 
   Example:
 
+    $ get-gh-downloads jopemachine some-lib
+    $ get-gh-downloads jopemachine some-lib --name=0.0.1
     $ get-gh-downloads jopemachine some-lib --tag=v0.0.1
+    $ get-gh-downloads jopemachine some-lib --latest
 
   ✔ Works done!
 
@@ -39,6 +48,11 @@ const cli = meow(chalk.white(
       tag: {
         type: 'string',
         alias: 't',
+        isRequired: () => false
+      },
+      latest: {
+        type: 'boolean',
+        alias: 'l',
         isRequired: () => false
       },
     }
@@ -71,7 +85,7 @@ ${chalk.magentaBright('Total')}: ${chalk.greenBright(totalDownload)}`);
   const userId = cli.input[0]
   const repository = cli.input[1];
 
-  const { name, tag } = cli.flags;
+  const { name, tag, latest } = cli.flags;
 
   const spinner = ora({
     color: 'green',
@@ -83,6 +97,7 @@ ${chalk.magentaBright('Total')}: ${chalk.greenBright(totalDownload)}`);
     repository,
     name,
     tagName: tag,
+    onlyLatest: latest,
   });
 
   spinner.succeed('Works done!');

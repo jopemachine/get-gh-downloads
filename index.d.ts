@@ -14,9 +14,11 @@ export default function ({
   repository,
   tagName,
   name,
+  onlyLatest,
 }: {
   userId: string;
   repository: string;
   tagName?: string;
   name?: string;
+  onlyLatest?: boolean;
 }): Promise<DownloadInfo[]>;

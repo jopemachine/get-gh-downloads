@@ -12,7 +12,7 @@ const extract = (keys, object) => {
   return ret;
 };
 
-module.exports = async ({ userId, tagName, repository, name }) => {
+module.exports = async ({ userId, tagName, repository, name, onlyLatest }) => {
   if (!userId && !repository) {
     throw new Error('userId and repository must be given.');
   }
@@ -25,6 +25,10 @@ module.exports = async ({ userId, tagName, repository, name }) => {
 
     return extract(['name', 'assets', 'tag_name'], info);
   });
+
+  if (onlyLatest) {
+    return [extracted[0]];
+  }
 
   if (tagName) {
     return extracted.filter((info) => info.tagName === tagName);
