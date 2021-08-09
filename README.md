@@ -1,7 +1,7 @@
-# get-github-download-count
+# get-gh-downloads
 
-[![NPM download total](https://img.shields.io/npm/dt/get-github-download-count)](http://badge.fury.io/js/get-github-download-count)
-[![NPM version](https://badge.fury.io/js/get-github-download-count.svg)](http://badge.fury.io/js/get-github-download-count)
+[![NPM download total](https://img.shields.io/npm/dt/get-gh-downloads)](http://badge.fury.io/js/get-gh-downloads)
+[![NPM version](https://badge.fury.io/js/get-gh-downloads.svg)](http://badge.fury.io/js/get-gh-downloads)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 Display github release download count in console (also include lib)
@@ -11,7 +11,7 @@ Display github release download count in console (also include lib)
 ## Usage
 
 ```js
-const getDownloadCount = require('get-github-download-count');
+const getDownloadCount = require('get-gh-downloads');
 
 const data = getDownloadCount({
   userId,
@@ -25,11 +25,11 @@ const data = getDownloadCount({
 ```
   Usage
 
-    $ get-github-download-count [user_id] [repository_name] name_option tag_option
+    $ get-gh-downloads [user_id] [repository_name] name_option tag_option
 
   Example:
 
-    $ get-github-download-count jopemachine some-lib --tag=v0.0.1
+    $ get-gh-downloads jopemachine some-lib --tag=v0.0.1
 
   ✔ Works done!
 

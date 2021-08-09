@@ -1,31 +1,21 @@
 {
-  "name": "get-github-download-count",
+  "name": "get-gh-downloads",
   "version": "0.0.1",
   "bin": {
-    "get-github-download-count": "./cli.js"
+    "get-gh-downloads": "./cli.js"
   },
+  "private": false,
   "description": "Display github release download in console (also include lib)",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "publishConfig": {
-    "registry": "https://github.com/jopemachine"
-  },
   "files": [
     "index.d.ts",
     "*.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jopemachine/get-github-download-count.git"
-  },
   "author": "jopemachine",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jopemachine/get-github-download-count/issues"
-  },
-  "homepage": "https://github.com/jopemachine/get-github-download-count#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "boxen": "^5.0.1",

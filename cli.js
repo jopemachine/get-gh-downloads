@@ -9,11 +9,11 @@ const getDownloadCounts = require('./getDownloadCounts');
 const cli = meow(chalk.white(
 `  Usage
 
-    $ get-github-download-count [user_id] [repository_name] name_option tag_option
+    $ get-gh-downloads [user_id] [repository_name] name_option tag_option
 
   Example:
 
-    $ get-github-download-count jopemachine some-lib --tag=v0.0.1
+    $ get-gh-downloads jopemachine some-lib --tag=v0.0.1
 
   ✔ Works done!
 
