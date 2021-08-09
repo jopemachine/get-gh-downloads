@@ -1,8 +1,8 @@
 {
-  "name": "get-github-release-download-count",
+  "name": "get-github-download-count",
   "version": "0.0.1",
   "bin": {
-    "get-github-release-download-count": "./cli.js"
+    "get-github-download-count": "./cli.js"
   },
   "description": "Display github release download in console (also include lib)",
   "main": "index.js",
